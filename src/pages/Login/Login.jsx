@@ -1,11 +1,14 @@
 import React,{useState} from 'react'
 import { useContext } from 'react'
 import { authContext } from '../../context/AuthContext'
+import { authContext1 } from '../../context/AuthContext1'
 
 function Login() {
     // const [userName,setName]= useState("")
     // const[password1,setPassword] = useState("")
     const{myName,setMyName}=useContext(authContext)
+    const{isAuthenticated,setIsAuthenticated}=useContext(authContext1)
+    console.log(isAuthenticated )
     const[state,setState]= useState({
         email:``,
         pasword: ``,
@@ -17,14 +20,13 @@ function Login() {
     
     const handleSubmit = (e)=>{
         e.preventDefault();
+        setIsAuthenticated(true)
+        // console.log(isAuthenticated)
         console.log(state)
         // console.log(`YOur userName is ${userName} and passwor is ${password1}`)
     
     }
  
-    const showData = ()=>{
-        
-    }
     
 
 
@@ -36,24 +38,24 @@ function Login() {
                         <h2 className='text-dark text-center mb-3'>Login Form</h2>
                         <div className="row mb-3">
                                     <div className="col">
-                                        <input type="text" name="email"  id="" defaultValue={myName} placeholder='Enter Name'  className='form-control' onChange={(e)=>{setMyName(e.target.value)}} />
+                                        <input type="text" name="email"  id="1" defaultValue={myName} placeholder='Enter Name'  className='form-control' onChange={(e)=>{setMyName(e.target.value)}} />
                                     </div>
                                 </div>
                         <form onSubmit={handleSubmit}>
                             <div className="container">
                                 <div className="row mb-3">
                                     <div className="col">
-                                        <input type="text" name="email" id="" placeholder='Enter Yout name'  className='form-control' onChange={handleChange} />
+                                        <input type="text" name="email" id="2" placeholder='Enter Yout name'  className='form-control' onChange={handleChange} />
                                     </div>
                                 </div>
                                 <div className="row mb-3 ">
                                     <div className="col">
-                                        <input type="password" name="password" id="" placeholder='Enter Your Password' className='form-control'onChange={handleChange} />
+                                        <input type="password" name="password" id="3" placeholder='Enter Your Password' className='form-control'onChange={handleChange} />
                                     </div>
                                 </div>
                                 <div className="row mb-3">
                                     <div className="col">
-                                        <button className='btn btn-success w-100' onClick={showData}>Login </button>
+                                        <button className='btn btn-success w-100 '>Login </button>
                                     </div>
                                 </div>
                             </div>

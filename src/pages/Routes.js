@@ -12,6 +12,9 @@ import UseEffect from './Hooks/UseEffect'
 import UseMemo from './Hooks/UseMemo'
 import UseReff from './Hooks/UseReff'
 import UseContext from './Hooks/UseContext'
+import UseReducer from './Hooks/UseReducer'
+import Dashboard from './Dashboard/dashboard'
+import PrivateRoute from '../important/PrivateRoute'
 function CustomRoutes() {
   return (
     <BrowserRouter>
@@ -28,6 +31,9 @@ function CustomRoutes() {
         <Route path='/Hooks/UseReff' element={<UseReff/>}/>
         <Route path='/Hooks/UseMemo' element={<UseMemo/>}/>
         <Route path='/Hooks/UseContext' element={<UseContext/>}></Route>
+        <Route path='/Hooks/UseReducer' element={<UseReducer/>}></Route>
+        {/* <Route path='dashboard' element={<DashBoard/>}></Route> */}
+        <Route path='/dashboard' element={<PrivateRoute Component={<Dashboard/>}/>}/>
 
 
         <Route path='*' element={<NoPage/>}/>

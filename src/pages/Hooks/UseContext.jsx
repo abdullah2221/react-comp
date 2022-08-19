@@ -9,7 +9,7 @@ const {count,incrementHandler,decrementHandler,handleReset} =useContext(countCon
         <div className="row">
             <div className="col">
                 <h1 className='text-center text-info'>
-                    This is useState class.
+                    This is useContext Hook.
                 </h1><br />
                 <h1 className="text-center text-primary fw-bold">Counter App</h1>
 

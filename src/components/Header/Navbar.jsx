@@ -26,9 +26,15 @@ function Navbar() {
                             <li className="nav-item">
                                 <Link to="/contact" className="nav-link " aria-current="page" >Contact US</Link>
                             </li>
+                            
                             <li className="nav-item">
                                 <Link to="/login" className="nav-link " aria-current="page" >Log IN</Link>
                             </li>
+                            <li className="nav-item">
+                                <Link to="/dashboard" className="nav-link " aria-current="page" >Dashboard</Link>
+                            </li>
+                          
+
                           
                             <li className="nav-item dropdown">
                                 <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -40,6 +46,7 @@ function Navbar() {
                                     <li><Link to="/Hooks/UseReff" className="dropdown-item">UseRef</Link></li>
                                     <li><Link to="/Hooks/UseMemo" className="dropdown-item">UseMemo</Link></li>
                                     <li><Link to="/Hooks/UseContext" className='dropdown-item'>UseContext</Link></li>
+                                    <li><Link to="/Hooks/UseReducer" className='dropdown-item'>UseReducer</Link></li>
                                     
                                     {/* <li><hr className="dropdown-divider"/></li>
                                     <li><a className="dropdown-item" href="#">Something else here</a></li> */}
